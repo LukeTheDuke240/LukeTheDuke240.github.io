@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Our Solar System</title>
+	<!-- metadata tags: a short description of the website, the title, and keywords so google can see it.-->
+	<meta charset="utf-8">
+	<meta name="Description" content="This is a website detailing our solar system: what it is, how it works and what's in it.">
+	<meta name="Keywords" content="space, solar system, earth, mars, sun, moon, mercury, venus, planets">
+	<!-- Links the external javascript and CSS -->
+	<link rel="stylesheet" type="text/css" href="css/basestyle.css">
+	<script src="js/javascript.js"></script>
+
+</head>
+<body>
+	<nav> <!--navbar to help the user navigate the site. when clicked, javascript is started to fade out and then navigate.-->
+
+			<a onclick="navigateto('index.html')" class="fakehyperlink">HOME</a>
+			<a onclick="navigateto('planets.html')" class="fakehyperlink">PLANETS</a>
+			<a onclick="navigateto('links.html')" class="fakehyperlink">LINKS</a>
+			<a onclick="navigateto('references.html')" class="fakehyperlink">REFERENCES</a>
+			<a onclick="navigateto('contact.html')" class="fakehyperlink">CONTACT</a>
+
+	</nav> <!-- end navbar-->
+
+	<div class="header">References</div>
+
+	<img src="images/gradient.png" class="separator" alt="a gradient separator">
+
+	<div class="divsixty"> <!--div container holding all the references. this is a long block of text separated with linebreaks. each item that needs a hyperlink is given classes and attributes to start JS when clicked, and appear as a hyperlink. -->
+		Planet Images: <a onclick="navigateto('http://nasa.gov')" class="fakehyperlink">NASA Public Domain</a><br>
+		Mercury Image: <a onclick="navigateto('http://en.wikipedia.org/wiki/File:Mercury_transit_2.jpg')" class="fakehyperlink">Brocken Inaglory (Nov 8th 2006)</a><br>
+		Mars Image: <a onclick="navigateto('http://www.esa.int')" class="fakehyperlink">European Space Agency (Feb 17th 2007)</a><br>
+		Star background: Webtreats @ <a onclick="navigateto('http://www.flickr.com/photos/webtreatsetc/')" class="fakehyperlink">www.flickr.com/photos/webtreatsetc/ (Feb 11th 2011)</a><br><br>
+
+		Planet info and data: <a onclick="navigateto('http://en.wikipedia.org/wiki/Category:Solar_System')" class="fakehyperlink">Wikipedia (Creative Commons Attribution)</a><br>
+		<a onclick="navigateto('http://theplanets.org/the-sun/')" class="fakehyperlink">theplanets.org/the-sun/<br>
+		<a onclick="navigateto('http://space-facts.com/mercury/')" class="fakehyperlink">space-facts.com/mercury/<br>
+		<a onclick="navigateto('http://theplanets.org/venus/')" class="fakehyperlink">theplanets.org/venus/<br>
+		<a onclick="navigateto('http://space-facts.com/earth/')" class="fakehyperlink">space-facts.com/earth/<br>
+		<a onclick="navigateto('http://theplanets.org/mars/')" class="fakehyperlink">theplanets.org/mars/<br>
+		<a onclick="navigateto('http://theplanets.org/saturn/')" class="fakehyperlink">theplanets.org/saturn/<br>
+		<a onclick="navigateto('http://space-facts.com/uranus/')" class="fakehyperlink">space-facts.com/uranus/<br>
+		<a onclick="navigateto('http://space-facts.com/pluto/')" class="fakehyperlink">space-facts.com/pluto/<br>
+	</div>
+
+</div>
+
+	<!--This website is created by (C) Luke Dyer 2020. It is subject to copyright.-->
+
+</body>
+</html>
