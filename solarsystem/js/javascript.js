@@ -1,5 +1,5 @@
 function email() { //opens the user's email client and prefills the email with my email as the recipient, subject and a body asking for feedback.
-	window.location.href = "mailto:lukdye@tauraroa.school.nz?subject=Solar%20System%20Feedback&body=Enter%20your%20feedback%20below%20this%20line."
+	window.location.href = "mailto:redacted@redacted.com?subject=Solar%20System%20Feedback&body=Enter%20your%20feedback%20below%20this%20line."
 }
 
 function navigateto(a) { //code to navigate to a url (better than href)
