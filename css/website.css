@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+		
+		@keyframes bordercolor {
+  			0%, 100% {
+   			 	text-shadow: 4px 4px #F55;
+  			}
+  			33% {
+    			text-shadow: 4px 4px #5F5;
+  			}
+  			66% {
+  				text-shadow: 4px 4px #55F;
+  			}
+		}
+
+		body {
+			background-color: rgb(24, 26, 27);
+			background-image: url("../img/bg.png");
+			color: #ffffff;
+			font-family: 'Source Code Pro', monospace;
+		}
+
+		header {
+			padding: 8px;
+			margin-bottom: 20px;
+		}
+		
+		#headerTitle {
+			letter-spacing: 8px;
+			margin: 0;
+			font-size: 48px;
+			animation: bordercolor 5s linear infinite;
+		}
+
+		#headerText {
+			margin: -6px 0 8px 4px;
+		}
+		
+		article {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		
+		p {
+			margin: 0;
+		}
