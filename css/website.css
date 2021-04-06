@@ -3,11 +3,13 @@
 @font-face {
 	font-family: sf;
 	src: url("../fonts/sf.ttf");
+	font-display: swap;
 }
 
 @font-face {
 	font-family: pricedown;
 	src: url("../fonts/pricedown.ttf");
+	font-display: swap;
 }
 
 		
