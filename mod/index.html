@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Krunker Mod Viewer</title>
+    <style>
+        @font-face {
+            font-family: 'gamefont';
+            src: url('./font2.ttf');
+        }
+
+        html,
+        body,
+        input,
+        button {
+            font-family: 'gamefont' !important;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        a {
+            color: black;
+        }
+
+        .mod {
+            background-color: #aaa;
+            padding: 4px;
+            border-radius: 4px;
+            width: 275px;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mod p {
+            margin-bottom: 0;
+            color: rgba(0, 0, 0, .6);
+        }
+
+        .mod span {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        img {
+            height: 125px;
+            width: inherit;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        #header {
+            background-color: #aaa;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        #header1 {
+            display: flex;
+        }
+
+        #header>p>a {
+            float: right;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 6px;
+        }
+
+        #list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .yeehow {
+            color: #44f;
+        }
+
+        #loadingstatus {
+            display: inline;
+            float: right;
+            padding: 8px 0 8px 8px;
+        }
+
+        .errortext {
+            width: 275px;
+            height: 185px;
+            position: absolute;
+            opacity: 0.5;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            line-height: 120px;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .imgholder {
+            width: inherit;
+            z-index: 1;
+        }
+
+        #name {
+            background-color: #fff;
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        #find {
+            background-color: #2196F3;
+            padding: 8px;
+            border-radius: 8px;
+            color: #fff;
+            border: transparent;
+        }
+
+        .flexgrow {
+            flex-grow: 9999;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header1">
+            <p>Krunker Mod Viewer 2.0</p>
+            <div class="flexgrow"></div>
+            <div>
+                <a href="https://yee.how">yeehow</a> and <a href="https://luketheduke.xyz">luketheduke</a>
+            </div>
+            </p>
+        </div>
+        
+        <div>
+           <input type="text" placeholder="Mod Name" id="name" autofocus autocomplete="off">
+            <button onclick="find()" id="find">Find</button>
+            <p id="loadingstatus">Done</p> 
+        </div>
+    </div>
+    
+    <div id="list"></div>    
+
+    <script>
+        var input = document.getElementById("name");
+        var list = document.getElementById("list");
+        var loadingstatus = document.getElementById("loadingstatus");
+
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("find").click();
+            }
+        });
+
+        async function find() {
+
+            loadingstatus.innerHTML = "Loading..."
+
+            clearMods();
+
+            var get = await fetch(`https://api.krunker.io/webhooks/general/mods/search?val=${input.value}`);
+            var json = await get.json();
+
+            json.data.forEach(element => {
+                addMod(element);
+            });
+
+            loadingstatus.innerHTML = "Done"
+        }
+
+        function addMod(element) {
+
+            var holder = document.createElement("div");
+
+            var imgholder = document.createElement("a");
+            imgholder.className = "imgholder"
+
+            if (element.mod_url == "ua") {
+                imgholder.href = `https://user-assets.krunker.io/md${element.mod_id}/mod.zip`
+            } else {
+                imgholder.href = element.mod_url;
+            }
+
+            var div = document.createElement("div");
+            div.className = "mod";
+            div.appendChild(imgholder);
+
+            var img = document.createElement("img");
+            img.src = `https://user-assets.krunker.io/md${element.mod_id}/thumb.png`;
+            imgholder.appendChild(img);
+
+            var errortext = document.createElement("p");
+            errortext.className = "errortext";
+            errortext.innerHTML = "No Thumbnail";
+            div.appendChild(errortext);
+
+            var name = document.createElement("a");
+            name.textContent = element.mod_name;
+            name.href = "https://krunker.io/social.html?p=mod&q=" + element.mod_name;
+            div.appendChild(name);
+
+            var creator = document.createElement("a");
+            creator.innerHTML = `<span>by </span>${element.creatorname}`;
+            creator.href = "https://krunker.io/social.html?p=profile&q=" + element.creatorname;
+            div.appendChild(creator);
+
+            holder.appendChild(div);
+
+            list.appendChild(holder);
+        }
+
+        function clearMods() {
+            list.innerHTML = "";
+        }
+
+        find();
+
+    </script>
+</body>
+
+</html>
