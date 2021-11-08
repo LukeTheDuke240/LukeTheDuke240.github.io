@@ -1,0 +1,1132 @@
+/*
+PANDA CSS COPYRIGHT LUKETHEDUKE#7313
+DO NOT DISTRIBUTE
+*/
+
+/*=== SECTION 0: ROOT === ad blocker, image definitions and animations*/
+
+#aHider, #aHolder, .endAHolder, #tlInfHold, #newsHolder, .imageButton, #editorBtnM, #headerRight > .verticalSeparator, #onetrust-consent-sdk, #gameNameHolder, #voiceDisplay, #seasonLabel, .setSugBox2 {
+	display: none !important;
+}
+
+#subLogoButtons {
+	bottom: 0px;
+}
+
+/*=== SECTION 1: LOAD SCREEN ===*/
+
+@keyframes loadAnim {
+  0%   {transform: scaleX(1.5) translateX(0px);}
+  99.99999% {transform: scaleX(1.5) translateX(-364px);}
+  100% {transform: scaleX(1.5) translateX(0px);}
+}
+
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 0.7;}
+}
+
+@keyframes fadeInFull {
+0% {opacity: 0;}
+100% {opacity: 0.7;}
+}
+
+
+#initLoader :first-child, #loadHeader, #loadEditrBtn, #loadInfoRHolder, #loadInfoLHolder, #loadTipsHolder {
+	display: none;
+}
+
+/*#initLoader {
+	background: var(--load-screen);
+    background-size: cover;
+    background-position-x: center;
+	filter: saturate(0);
+}*/
+
+#initLoader {
+    background: black !important;
+}
+
+#initLoader::after {
+    content: "LOADING";
+    font-size: 100px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#initLoader::before {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 4000px;
+    height: 300px;
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='4000' height='300' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice'%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cg fill='none' id='sines'%3E%3Cpath d='m-2.28319,150.5c29.68645,61.21866 58.08297,119.5 91.02556,119.5s61.3391,-58.28134 91.02556,-119.5s58.08239,-119.5 91.02498,-119.5s61.3391,58.28134 91.02556,119.5s58.08239,119.5 91.02556,119.5s61.3391,-58.28134 91.02498,-119.5s58.08297,-119.5 91.02556,-119.5s61.3391,58.28134 91.02556,119.5s58.08239,119.5 91.02498,119.5s61.3391,-58.28134 91.02556,-119.5s58.08239,-119.5 91.02498,-119.5s61.3391,58.28134 91.02556,119.5s58.08239,119.5 91.02556,119.5s61.3391,-58.28134 91.02498,-119.5s58.08297,-119.5 91.02556,-119.5s61.3391,58.28134 91.02556,119.5s58.08239,119.5 91.02498,119.5s61.3391,-58.28134 91.02556,-119.5s58.08239,-119.5 91.02498,-119.5s61.3391,58.28134 91.02556,119.5s58.08239,119.5 91.02556,119.5s61.3391,-58.28134 91.02498,-119.5s58.08297,-119.5 91.02556,-119.5s61.3391,58.28134 91.02556,119.5s58.08239,119.5 91.02498,119.5s61.3391,-58.28134 91.02556,-119.5s58.08239,-119.5 91.02556,-119.5s61.3391,58.28134 91.02498,119.5s58.08297,119.5 91.02556,119.5s61.3391,-58.28134 91.02498,-119.5s58.08297,-119.5 91.02556,-119.5s61.3391,58.28134 91.02556,119.5s58.08239,119.5 91.02498,119.5s61.3391,-58.28134 91.02556,-119.5s58.08239,-119.5 91.02556,-119.5s61.3391,58.28134 91.02498,119.5s58.08297,119.5 91.02556,119.5s61.3391,-58.28134 91.02556,-119.5s58.08239,-119.5 91.02498,-119.5s61.3391,58.28134 91.02556,119.5s58.08239,119.5 91.02498,119.5s61.3391,-58.28134 91.02556,-119.5s58.08239,-119.5 91.02556,-119.5s61.3391,58.28134 91.02498,119.5' id='svg_1' stroke='white' stroke-width='8'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	animation: loadAnim 3s linear infinite;
+}
+
+#loadGamNm {
+	font-size: 0!important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	transform: unset;
+    background-image: url("data:image/svg+xml,%3Csvg width='2' height='2' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice'%3E%3C!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit--%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Crect fill='%23FFFFFF' height='1' id='svg_1' width='1' x='0' y='0'/%3E%3Crect fill='%23FFFFFF' height='1' id='svg_2' width='1' x='1' y='1'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+}
+
+#loadGamNm::after {
+    content: "CSS By LukeTheDuke#7313";
+    font-size: 33px !important;
+    position: fixed;
+    left: 50%;
+    top: calc(50% + 70px);
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/*=== SECTION 2: MENU ===*/
+
+#policeButton, #menuClassSubtext, #instructions, #mapInfoHolder, #headerRight, #menuClassNameTag, .bigMFeatBarI, .menuItemTitle, #subLogoButtons > .button > img, #bubbleContainer, #menuClassName, #rankedSoonTm {
+	display: none !important;
+}
+
+#menuItemContainer {
+	background: rgb(0, 0, 0);
+    	width: 100%;
+    	flex-direction: row;
+    	bottom: unset;
+    	left: unset;
+    	top: 0;
+    	right: 0;
+	justify-content: flex-end;	
+	pointer-events: all;
+}
+
+.menuItem {
+	flex-grow: unset;
+	width: 75px; /*REMOVE WIDTH FOR SOMETHING SUPER COOL. REMOVE PSEUDO FIRST*/
+    height: 75px;
+    margin: 10px;
+    background: var(--accent-color-2);
+    border: 5px solid var(--accent-color-2);
+    border-radius: 99999px;
+	transition: all 0.3s;
+}
+
+.menuItem:hover {
+	background: transparent;
+}
+
+.menuItem:hover .menBtnIcn, .menuItem:active .menBtnIcn{
+	transform:unset !important;
+	color: var(--accent-color-2) !important;
+}
+
+.menBtnIcn {
+	color: black !important;
+}
+
+#subLogoButtons {
+	display: flex;
+    	flex-direction: column;
+    	bottom: unset;
+    	transform: unset;
+    	z-index: 2;
+    	left: 0;
+    	top: 0;
+    	height: 100%;
+    	background: white;
+	pointer-events: all;
+	z-index: 3;
+}
+
+#subLogoButtons::before {
+	content: "";
+	position: fixed;
+    	bottom: 0;
+    	left: 0;
+    	width: 100%;
+	height: 105px;
+    	background: white;
+	pointer-events: all;
+}
+
+#subLogoButtons > .button {
+	flex-grow: unset;
+	width: 75px;
+    height: 75px;
+    margin: 10px;
+    background: var(--accent-color) !important;
+    border: 5px solid var(--accent-color) !important;
+    box-shadow: unset !important;
+    border-radius: 99999px;
+	transition: all 0.3s;
+    font-size: 0 !important;
+    line-height: unset;
+    padding: unset !important;
+}
+
+#subLogoButtons > .button:hover, #subLogoButtons > .button:active {
+	background: transparent !important;
+	transform: unset;
+	box-shadow: unset !important;
+}
+
+#subLogoButtons > .button:hover:before {
+	color: var(--accent-color) !important;
+}
+
+
+#subLogoButtons > .button::before {
+	position: absolute;
+	font-family: 'Material Icons Outlined';
+	width: 75px;
+    	height: 75px;
+	left: 0;
+	top: 0;
+    	color: white;
+	font-size: 60px;
+	line-height: 75px;
+}
+
+#menuBtnHost::before {
+	content: "podcasts";
+}
+
+#menuBtnBrowser::before {
+	content: "travel_explore";
+}
+
+#menuBtnRanked::before {
+	content: "keyboard_arrow_up";
+}
+
+#inviteButton::before {
+	content: "add_link";
+}
+
+#menuBtnJoin::before {
+	content: "attach_email";
+}
+
+#menuHider::before {
+	content: "";
+    position: fixed;
+    bottom: 104px;
+    left: 104px;
+    width: 800px;
+    height: 800px;
+    background: var(--circle-mask);
+    background-size: cover;
+	z-index: 2;
+}
+
+#menuHolder {
+	backdrop-filter: saturate(0);
+}
+
+#menuClassContainer {
+	transform: scale(1);
+    transition: all 0.5s;
+    top: unset;
+    bottom: 0px;
+    right: unset;
+    left: -90px;
+    pointer-events: all;
+    padding-bottom: 40px;
+}
+
+#menuClassContainer:hover #classPreviewCanvas, #menuClassContainer:hover div:last-child {
+	transform: unset !important;
+}
+
+#classPreviewCanvas, #menuClassContainer div:last-child {
+	transform: translateY(500px);
+	transition: all 0.5s;
+}
+
+#menuClassContainer:hover:before {
+	opacity: 0;
+}
+
+#menuClassContainer::before {
+	content: "";
+    width: 400px;
+    height: 400px;
+    background: var(--menu-girl);
+    background-size: cover;
+    z-index: 900;
+    border-radius: 99999px;
+    transition: all 0.5s;
+    opacity: 1;
+    pointer-events: none;
+    position: fixed;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+	filter: saturate(0);
+    border: 10px solid lightgrey;
+}
+
+#customizeButton {
+	text-shadow: unset !important;
+    background: var(--accent-color);
+    font-size: 40px !important;
+    border-radius: 99999px;
+    padding: 0px 20px !important;
+	border: 5px solid var(--accent-color) !important;
+	transition: all 0.3s;
+	height: 70px;
+	line-height: 70px;
+}
+
+#customizeButton:hover {
+	transform: unset;
+	background: transparent;
+	color: var(--accent-color) !important;
+}
+
+#customizeButton:hover > .material-icons {
+	color: var(--accent-color) !important;
+}
+
+#customizeButton > .material-icons {
+	margin-left: unset;
+}
+
+#classPreviewCanvas {
+	margin-bottom: unset;
+	filter: saturate(0);
+}
+
+
+/*========menu timer, by candice===========*/
+#uiBase.onMenu #spectateUI {
+    display: block!important;
+    position: fixed;
+    top: 88px;
+    right: 0px;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+}
+
+#uiBase.onMenu #spectateHUD {
+    display: flex;
+    justify-content: center;
+    transform: unset;
+    left: unset;
+	top: 20px;
+	text-shadow: unset;
+}
+
+#uiBase.onMenu #specTeam0, #uiBase.onMenu #spec0, #uiBase.onMenu #spec1, #uiBase.onMenu #specNames, #uiBase.onMenu #specStats, #uiBase.onMenu #specContr, #uiBase.onMenu #specKPDContr, #uiBase.onMenu #specSus, #uiBase.onMenu #specTeam1, #uiBase.onMenu #specGMessage, #uiBase.onMenu #specGameInfo {
+    display: none!important
+}
+
+#uiBase.onMenu #specTimer {
+    text-shadow: unset !important;
+    width: unset  !important;
+    height: unset !important;
+    font-size: 60px !important;
+    text-align: center !important;
+    position: fixed !important;
+    transform: unset !important;
+    padding: 20px !important;
+    background-color: white !important;
+    color: black !important;
+    will-change: unset !important;
+    border-radius: 99999px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    min-width: 175px !important;
+	pointer-events: all;
+	left: unset !important;
+	right: 0;
+}
+
+#menuMiniProfilePic, .krSocial, #signedInHeaderBar > * > .verticalSeparator {
+	display: none;
+}
+
+#signedInHeaderBar {
+	z-index: 2;
+    left: 110px;
+    height: 105px;
+    background: transparent;
+    padding-left: 20px;
+}
+
+#signedInHeaderBar > div:first-child {
+    background: white;
+    border-radius: 99999px 0 0 99999px;
+}
+
+#signedInHeaderBar > * > .progressBar {
+	position: fixed;
+    padding: 0;
+    border-radius: 0px !important;
+    left: 105px;
+    top: 105px;
+    right: 0;
+    background: #00000040;
+}
+
+#signedInHeaderBar > * > .progressBar > .progressBarInner {
+	background: var(--accent-color-2);
+    border-radius: 0px;
+}
+
+#mLevelCont {
+	background: transparent;
+	padding-left: 0;
+	margin-left: 0;
+	display: flex;
+	place-items: center;
+}
+
+#mLevelContV {
+    font-size: 40px;
+    line-height: unset;
+    padding: 5px 20px 0px 20px;
+    background: white;
+    border-radius: 0 99999px 99999px 0;
+    color: black;
+}
+
+#mLevelContV::before {
+	content: "Level ";
+}
+
+#menuUsernameContainer, .krInfo, .junkInfo {
+	margin-right: 10px;
+    padding: 0px 20px;
+    background: transparent;
+    border-radius: 99999px;
+    margin-top: unset;
+}
+
+#signedInHeaderBar > :first-child {
+	display: flex !important;
+}
+
+#menuAccountUsername, #menuKRCount, #menuKRCount > *, #menuJNKCount {
+	font-size: 40px;
+    color: black !important;
+    padding-top: 5px;
+}
+
+#menuJNKCount span {
+	display: none;
+}
+
+#menuJNKCount::after {
+	content: " Junk";
+}
+
+#mailContainer {
+	position: fixed;
+    right: 108px;
+    top: 214px;
+    width: 85px;
+    height: 85px;
+    background: transparent;
+    border-radius: 99999px;
+}
+
+#mailIcon {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 50px !important;
+    color: black !important;
+    background: var(--accent-color-2);
+    border-radius: 99999px;
+    border: 5px solid var(--accent-color-2);
+    font-family: "Material Icons Outlined";
+}
+
+#mailIcon:hover {
+	color: var(--accent-color-2) !important;
+    transform: unset !important;
+    background: transparent !important;
+    opacity: 1 !important;
+}
+
+#mailCount {
+	top: unset;
+    bottom: -10px;
+    right: -10px;
+    color: transparent;
+    border: unset;
+    pointer-events: all;
+    background: var(--accent-color-2);
+}
+
+#spectButton > span {
+	display: none;
+}
+
+#spectButton > .switchsml {
+	width: 75px;
+    height: 75px;
+    border: 5px solid var(--accent-color-2);
+    border-radius: 99999px;
+}
+
+#uiBase.onMenu #spectButton {
+	top: 214px;
+    left: unset;
+    right: -37px;
+}
+
+#spectButton > .switchsml > .sliderSml {
+	background: var(--accent-color-2);
+    transform: scale(1.02);
+}
+
+
+#spectButton > .switchsml > .sliderSml::before {
+	position: absolute;
+    content: "visibility";
+    font-family: "Material Icons Outlined";
+    color: black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+    font-size: 50px;
+    height: unset;
+    width: unset;
+    bottom: unset;
+    background: transparent;
+}
+
+input:checked+.sliderSml {
+	background: transparent !important;
+}
+
+input:checked+.sliderSml:before {
+	transform: translate(-50%, -50%) rotate(180deg) !important;
+	color: var(--accent-color-2) !important;
+	font-family: "Material Icons" !important;
+}
+
+#chatList {
+	transform: translateX(-10px);
+}
+
+#uiBase.onMenu #chatList {
+	transform: unset;
+}
+
+#uiBase.onMenu #chatHolder {
+    right: 23px;
+    bottom: 25px;
+    left: unset;
+    z-index: 99;
+}
+
+#chatHolder::before {
+	content: "";
+    background-image: var(--game-girl);
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    bottom: 100%;
+    left: 50%;
+    transform: scaleX(-1) translateX(50%);
+    filter: saturate(0);
+    background-size: cover;
+}
+
+#uiBase.onMenu #chatHolder::before {
+    display: none;
+}
+
+#chatList {
+	background-color: transparent;
+	width: 400px;
+}
+
+#chatList::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: white;
+}
+
+#chatList::-webkit-scrollbar-track {
+	border-radius: 999px;
+}
+
+#uiBase.onMenu #chatList {
+	direction: ltr;
+}
+
+#chatInputHolder {
+	background: black;
+    border-radius: 99999px;
+    text-align: left;
+    width: 390px;
+}
+
+#chatList > * {
+	background: white;
+    margin-bottom: 10px;
+    border-radius: 22px;
+    width: 385px;
+    animation: chatanim 0.2s ease-in-out;
+}
+
+#chatList > *:last-child {
+    margin-bottom: 0px !important;
+}
+
+.chatItem {
+    margin: 4px 15px 4px 15px;
+    max-width: 385px;
+}
+
+#chatHolder > #chatList *, #chatHolder > #chatList > * > .chatItem, #chatHolder > #chatList > * > .chatItem *, #chatHolder > #chatList > * > .chatItem * *, #chatHolder > #chatList > * > .chatItem span {
+	color: black !important;
+    font-size: 18px !important;
+    text-align: center;
+}
+
+#chatInput {
+    font-size: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+.chatMsg > img {
+	filter: invert(1) !important;
+    opacity: 1 !important;
+}
+
+.weaponChatIcon, .headShotChatIcon {
+    height: 25px;
+    width: unset;
+}
+
+#signedOutHeaderBar {
+	z-index: 999;
+    left: 110px;
+    height: 105px;
+    padding-left: 20px;
+    background-color: transparent;
+}
+
+#signedOutHeaderBar > .button {
+	padding: 0px 20px !important;
+    height: 50px;
+    line-height: 50px;
+    border: 5px solid white !important;
+    background-color: transparent;
+    font-size: 40px !important;
+    width: unset !important;
+    border-radius: 99999px;
+    color: black;
+    background: white;
+    transition: all 0.3s;
+}
+
+#signedOutHeaderBar > .button:hover {
+	transform: unset !important;
+	color: white !important;
+	background: transparent !important;
+}
+
+#signedOutHeaderBar > .button > span {
+	display: none;
+}
+
+/*=== SECTION 3: IN GAME UI ===*/
+
+@keyframes chatanim {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+#hudClassIcon, #challIcon, #maxHP, #teamName, #ammoMax, #ammoIcon {
+	display: none;
+}
+
+#bottomLeftHolder {
+	left: unset;
+	right: 50%;
+    transform: scale(0.5) translateX(50%) translateY(50%);
+    bottom: 20px;
+}
+
+#healthBar {
+	width: 350px;
+    height: 150px;
+    display: flex;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg width='350' height='150' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice'%3E%3C!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit--%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Ccircle cx='75' cy='75' fill='%23000000' id='svg_1' r='75' stroke='%23000000' stroke-width='0'/%3E%3Crect fill='%23000000' height='181.000005' id='svg_2' stroke='%23000000' stroke-width='0' transform='translate(0 -63)' width='289.000008' x='68.96875' y='46.333335'/%3E%3C/g%3E%3C/svg%3E");
+    /*border-right: 5px solid var(--accent-color);
+    border-top: 5px solid var(--accent-color);
+    border-bottom: 5px solid var(--accent-color);*/
+    flex-direction: row-reverse;
+}
+
+.healthBarSeg {
+	width: -webkit-fill-available;
+	border-radius: unset;
+	margin-right: -2px;
+	transform: scaleX(-1);
+	background-color: white;
+}
+
+.hpBSeg {
+	border-radius: unset;
+	box-shadow: unset;
+	-webkit-box-shadow: unset;
+	background-color: black !important;
+}
+
+#healthValueHolder {
+	padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    line-height: 155px;
+    z-index: 1;
+    background-color: transparent;
+}
+
+#healthValue {
+	font-size: 110px;
+    -webkit-text-stroke: 3px black;
+    letter-spacing: -4px;
+}
+
+#bottomRight {
+	width: 350px;
+    height: 150px;
+    bottom: 20px;
+    right: unset;
+    left: 50%;
+    transform: scale(0.5) translateX(-50%) translateY(50%);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg width='350' height='150' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice'%3E%3C!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit--%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Ccircle cx='275' cy='75' fill='%23000000' id='svg_1' r='75' stroke='%23000000' stroke-width='0'/%3E%3Crect fill='%23000000' height='181.000005' id='svg_2' stroke='%23000000' stroke-width='0' width='289.000008' x='-12.03125' y='-14.666665'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+#ammoDisplay {
+	background-size: 0%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-image: linear-gradient(to bottom, #000000 0%,#000000 100%);
+    border-radius: unset;
+    background-color: white;
+}
+
+#ammoVal {
+	font-size: 110px;
+    height: 100%;
+    left: 20px;
+    position: absolute;
+    line-height: 155px;
+    color: black;
+    -webkit-text-stroke: 3px white;
+}
+
+#chatHolder {
+	left: 20px;
+	bottom: 20px;
+    width: 400px;
+}
+
+#uiBase.onGame #chatHolder {
+	left: 20px;
+	bottom: 20px;
+}
+
+.weapKey {
+	display: none;
+}
+
+#weapDisplay {
+	right: 50%;
+    transform: translateX(50%);
+    bottom: 85px;
+}
+
+.weapIcon {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-60%);
+    filter: drop-shadow(5px 5px 0px black);
+} /*ffa6bc*/
+
+.weapIcon[style*="0.7"] {
+	display: none;
+}
+
+#reloadMsg, #interactMsg {
+    font-size: 25px;
+    opacity: 1;
+    border-radius: 99999px;
+    background-color: rgb(0, 0, 0);
+    bottom: 180px;
+    border: unset;
+    padding: 7px 20px;
+    line-height: unset;
+    color: white !important;
+}
+
+#reloadMsg *, #interactMsg * {
+    color: white !important;
+}
+
+#timerIcon {
+	display: none;
+}
+
+#timerDisplay {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 99999px;
+    margin: 0;
+    height: 50px;
+    padding: 10px 20px;
+    line-height: 50px;
+    min-width: 150px;
+    text-align: center;
+}
+
+#timerVal {
+	color: black;
+    font-size: 50px;
+    padding: 0;
+    text-align: center;
+}
+
+#curGameInfo {
+	display: none;
+}
+
+#gameMessage {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px 20px;
+    background: black;
+    border-radius: 99999px;
+}
+
+#gameMessage:empty {
+    background: transparent;
+}
+
+#teamScores {
+    background: transparent;
+}
+
+#voteToKick {
+    background: black;
+    color: white;
+    border-radius: 20px;
+}
+
+#voteToKick * {
+    color: white;
+}
+
+.debugInfo {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+#pingDisplay, #fpsDisplay {
+    padding: 10px 20px;
+    background: black;
+    border-radius: 99999px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin-bottom: unset;
+}
+
+#fpsDisplay {
+    color: white !important;
+}
+
+#pingDisplay, #pingText, #pingIcon {
+    color: black !important;
+}
+
+#pingDisplay {
+    border-radius: 0 99999px 99999px 0;
+    background: white;
+}
+
+#fpsDisplay {
+    border-radius: 99999px 0 0 99999px;
+}
+
+#pingText {
+    font-size: 22px;
+}
+
+#pingDisplay .material-icons {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+
+#teamScores {
+	padding: 0;
+}
+
+.tScoreT {
+    font-size: 25px;
+    color: white;
+}
+
+.tScore {
+	padding: 2px 20px 0px 10px;
+    background: black;
+    border-radius: 99999px;
+    margin-bottom: 5px;
+}
+
+.tScoreC {
+	width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 99999px;
+}
+
+#killStreakHolder {
+    position: fixed;
+    bottom: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.topRightCounters {
+	position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+	width: unset !important;
+}
+
+#endTimer {
+	font-style: normal;
+    text-shadow: unset;
+    color: black;
+    background: white;
+    padding: 0px 20px;
+    line-height: unset;
+    border-radius: 99999px;
+    margin-top: 171px;
+}
+
+.endCard {
+    background: white;
+    border-radius: 20px;
+}
+
+.endCard * {
+    color: black !important;
+    background: transparent !important;
+}
+
+.matchVote {
+	border: unset !important;
+}
+
+.topRightCounters > * > img, .topRightCounters > * > i {
+	display: none;
+}
+
+.countIcon {
+	background: white;
+    padding: 0px 10px;
+    border-radius: 99999px;
+    margin-bottom: 5px;
+}
+
+.countIcon span {
+	color: black !important;
+}
+
+#deathCount, #scoreCount {
+    background: black;
+}
+
+#deathCount span, #scoreCount span {
+    color: white !important;
+}
+
+#killsVal::after {
+	content: " kills";
+}
+
+#deathsVal::after {
+	content: " deaths";
+}
+
+#streakVal::after {
+	content: " streak";
+}
+
+#myScoreVal::after {
+	content: " pts";
+}
+
+#killCard {
+	background-color: white;
+    border-radius: 20px;
+}
+
+#killCard, #killCard > *, #killCard > * > *  {
+    color: black !important;
+    text-shadow: unset;
+}
+
+#killCardBy {
+	margin-left: 25px;
+    background: white;
+    color: black;
+    padding: 0 20px 5px 20px;
+    border-radius: 20px 20px 0px 0px;
+    transform: translateY(10px);
+}
+
+#kCProfile {
+    border-radius: 16px;
+}
+
+.kClvl {
+    display: none;
+}
+
+#killFeed {
+    padding: 10px;
+}
+
+.kfItem {
+	border-radius: 99999px;
+    padding: 4px 20px;
+	background-color: black;
+	font-size: 20px;
+    animation: fadeInFull 0.1s linear;
+    margin-bottom: 5px;
+}
+
+.kfItem * {
+    color: white !important;
+}
+
+.kfItem img {
+    opacity: 1 !important;
+}
+
+.kfMsg {
+	color: white;
+}
+
+#specContr {
+	right: 130px;
+}
+
+.newLeaderContainer {
+    background: white;
+    margin: 0;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.newLeaderContainer * {
+    color: black !important;
+}
+
+.newLeaderItem {
+    height: 30px;
+    line-height: 30px;
+}
+
+#topMidHold {
+	transform: unset;
+    top: unset;
+}
+
+#topRight {
+    top: 10px;
+    right: 10px;
+}
+
+#leaderDisplay {
+	background-color: transparent;
+}
+
+.leaderItem {
+	background: black;
+	padding: 5px 15px;
+}
+
+.leaderItem > * {
+    color: white !important;
+}
+
+.leaderItem:first-child {
+    background: white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.leaderItem:first-child > * {
+    color: black !important;
+}
+
+.leaderItem:last-child {
+    border-radius: 0px 0px 20px 20px;
+    padding-bottom: 10px;
+}
+
+.leaderItem:only-child {
+    border-radius: 20px !important;
+}
+
+/*MISC FIXES*/
+
+#instructionsUpdate {
+    background: white;
+    border-radius: 20px;
+}
+
+#instructionsUpdate > [style="color: rgba(255, 255, 255, 0.6);font-size: 20px;margin-bottom: 13px;margin-top: 10px;"] {
+	font-size: 0 !important;
+}
+
+#instructionsUpdate > div > [onclick="showWindow(2)"], #instructionsUpdate > div > [href="/"] {
+	font-size: 20px !important;
+	color: var(--accent-color) !important;
+}
+
+#instructionsUpdate > div {
+    color: var(--accent-color) !important;
+}

@@ -1,0 +1,27 @@
+/*
+PANDA CSS COPYRIGHT LUKETHEDUKE#7313
+DO NOT DISTRIBUTE
+*/
+
+@import url(https://luketheduke.xyz/assets/p1/panda.css);
+
+:root {
+    --menu-girl: url(https://luketheduke.xyz/assets/p1/menu.png);
+    --game-girl: url(https://luketheduke.xyz/assets/p1/game.png);
+
+    --accent-color: black;
+    --accent-color-2: white;
+
+    --yellow: var(--accent-color);
+    --blue: var(--accent-color);
+    --green: var(--accent-color);
+    --red: var(--accent-color);
+
+    /*mask image, please do not touch!*/
+    --circle-mask: url(https://luketheduke.xyz/assets/p1/circle.png);
+}
+
+@font-face {
+  font-family: "gamefont";
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+}
