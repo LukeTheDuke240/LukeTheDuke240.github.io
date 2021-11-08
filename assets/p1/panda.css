@@ -604,6 +604,7 @@ input:checked+.sliderSml:before {
 .chatItem {
     margin: 4px 15px 4px 15px;
     max-width: 385px;
+    background-color: transparent !important;
 }
 
 #chatHolder > #chatList *, #chatHolder > #chatList > * > .chatItem, #chatHolder > #chatList > * > .chatItem *, #chatHolder > #chatList > * > .chatItem * *, #chatHolder > #chatList > * > .chatItem span {
@@ -868,7 +869,7 @@ input:checked+.sliderSml:before {
 }
 
 #pingDisplay, #fpsDisplay {
-    padding: 10px 20px;
+    padding: 5px 15px;
     background: black;
     border-radius: 99999px;
     display: flex;
@@ -877,7 +878,7 @@ input:checked+.sliderSml:before {
     margin-bottom: unset;
 }
 
-#fpsDisplay {
+#fpsDisplay, #fpsDisplay * {
     color: white !important;
 }
 
@@ -896,12 +897,6 @@ input:checked+.sliderSml:before {
 
 #pingText {
     font-size: 22px;
-}
-
-#pingDisplay .material-icons {
-    font-size: 16px;
-    margin-left: 5px;
-    margin-right: 4px;
 }
 
 #teamScores {
