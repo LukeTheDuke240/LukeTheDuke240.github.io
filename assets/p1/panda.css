@@ -1,5 +1,6 @@
 /*
 PANDA CSS COPYRIGHT LUKETHEDUKE#7313
+DO NOT DISTRIBUTE
 */
 
 /*=== SECTION 0: ROOT === ad blocker, image definitions and animations*/
@@ -225,6 +226,17 @@ PANDA CSS COPYRIGHT LUKETHEDUKE#7313
     background: var(--circle-mask);
     background-size: cover;
 	z-index: 2;
+}
+
+#menuHider::after {
+    content: "Panda CSS V1 | LukeTheDuke#7313";
+    font-size: 33px !important;
+    position: fixed;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%, -50%);
+    color: white;
+	opacity: 0.4;
 }
 
 #menuHolder {
