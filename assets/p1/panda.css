@@ -1,6 +1,5 @@
 /*
 PANDA CSS COPYRIGHT LUKETHEDUKE#7313
-DO NOT DISTRIBUTE
 */
 
 /*=== SECTION 0: ROOT === ad blocker, image definitions and animations*/
@@ -93,7 +92,7 @@ DO NOT DISTRIBUTE
 
 /*=== SECTION 2: MENU ===*/
 
-#policeButton, #menuClassSubtext, #instructions, #mapInfoHolder, #headerRight, #menuClassNameTag, .bigMFeatBarI, .menuItemTitle, #subLogoButtons > .button > img, #bubbleContainer, #menuClassName, #rankedSoonTm {
+#menuClassSubtext, #instructions, #mapInfoHolder, #headerRight, #menuClassNameTag, .bigMFeatBarI, .menuItemTitle, #subLogoButtons > .button > img, #bubbleContainer, #menuClassName, #rankedSoonTm {
 	display: none !important;
 }
 
@@ -130,7 +129,7 @@ DO NOT DISTRIBUTE
 }
 
 .menBtnIcn {
-	color: black !important;
+	color: var(--accent-color) !important;
 }
 
 #subLogoButtons {
@@ -312,6 +311,22 @@ DO NOT DISTRIBUTE
 	margin-left: unset;
 }
 
+#policeButton {
+    height: 70px !important;
+    width: 70px !important;
+    margin-right: 10px;
+    border-radius: 99999px;
+    border: 5px solid black !important;
+    background: black;
+    transition: all 0.3s;
+    margin-left: 30px;
+}
+
+#policeButton:hover {
+    transform: unset;
+    background: transparent;
+}
+
 #classPreviewCanvas {
 	margin-bottom: unset;
 	filter: saturate(0);
@@ -322,8 +337,8 @@ DO NOT DISTRIBUTE
 #uiBase.onMenu #spectateUI {
     display: block!important;
     position: fixed;
-    top: 88px;
-    right: 0px;
+    top: 94px;
+    right: 97px;
     transform: translate(-50%, 50%);
     z-index: 1;
     width: 10px;
@@ -358,7 +373,6 @@ DO NOT DISTRIBUTE
     border-radius: 99999px !important;
     height: 40px !important;
     line-height: 40px !important;
-    min-width: 175px !important;
 	pointer-events: all;
 	left: unset !important;
 	right: 0;
@@ -399,7 +413,7 @@ DO NOT DISTRIBUTE
 #mLevelCont {
 	background: transparent;
 	padding-left: 0;
-	margin-left: 0;
+	margin-left: -2px;
 	display: flex;
 	place-items: center;
 }
@@ -410,7 +424,7 @@ DO NOT DISTRIBUTE
     padding: 5px 20px 0px 20px;
     background: white;
     border-radius: 0 99999px 99999px 0;
-    color: black;
+    color: var(--accent-color);
 }
 
 #mLevelContV::before {
@@ -431,7 +445,7 @@ DO NOT DISTRIBUTE
 
 #menuAccountUsername, #menuKRCount, #menuKRCount > *, #menuJNKCount {
 	font-size: 40px;
-    color: black !important;
+    color: var(--accent-color) !important;
     padding-top: 5px;
 }
 
@@ -445,8 +459,8 @@ DO NOT DISTRIBUTE
 
 #mailContainer {
 	position: fixed;
-    right: 108px;
-    top: 214px;
+    right: 11px;
+    top: 219px;
     width: 85px;
     height: 85px;
     background: transparent;
@@ -459,7 +473,7 @@ DO NOT DISTRIBUTE
     text-align: center;
     line-height: 75px;
     font-size: 50px !important;
-    color: black !important;
+    color: var(--accent-color) !important;
     background: var(--accent-color-2);
     border-radius: 99999px;
     border: 5px solid var(--accent-color-2);
@@ -495,7 +509,7 @@ DO NOT DISTRIBUTE
 }
 
 #uiBase.onMenu #spectButton {
-	top: 214px;
+	top: 124px;
     left: unset;
     right: -37px;
 }
@@ -510,7 +524,7 @@ DO NOT DISTRIBUTE
 	position: absolute;
     content: "visibility";
     font-family: "Material Icons Outlined";
-    color: black;
+    color: var(--accent-color);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -583,7 +597,7 @@ input:checked+.sliderSml:before {
 }
 
 #chatInputHolder {
-	background: black;
+	background: var(--accent-color);
     border-radius: 99999px;
     text-align: left;
     width: 390px;
@@ -611,6 +625,7 @@ input:checked+.sliderSml:before {
 	color: black !important;
     font-size: 18px !important;
     text-align: center;
+    text-shadow: unset !important;
 }
 
 #chatInput {
@@ -646,7 +661,7 @@ input:checked+.sliderSml:before {
     font-size: 40px !important;
     width: unset !important;
     border-radius: 99999px;
-    color: black;
+    color: var(--accent-color);
     background: white;
     transition: all 0.3s;
 }
@@ -693,7 +708,7 @@ input:checked+.sliderSml:before {
 .healthBarSeg {
 	width: -webkit-fill-available;
 	border-radius: unset;
-	margin-right: -2px;
+	margin-right: -3px;
 	transform: scaleX(-1);
 	background-color: white;
 }
@@ -702,7 +717,7 @@ input:checked+.sliderSml:before {
 	border-radius: unset;
 	box-shadow: unset;
 	-webkit-box-shadow: unset;
-	background-color: black !important;
+	background-color: var(--accent-color) !important;
 }
 
 #healthValueHolder {
@@ -718,7 +733,7 @@ input:checked+.sliderSml:before {
 
 #healthValue {
 	font-size: 110px;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 3px var(--accent-color);
     letter-spacing: -4px;
 }
 
@@ -752,7 +767,7 @@ input:checked+.sliderSml:before {
     left: 20px;
     position: absolute;
     line-height: 155px;
-    color: black;
+    color: var(--accent-color);
     -webkit-text-stroke: 3px white;
 }
 
@@ -782,7 +797,7 @@ input:checked+.sliderSml:before {
     left: 50%;
     bottom: 0;
     transform: translateX(-60%);
-    filter: drop-shadow(5px 5px 0px black);
+    filter: drop-shadow(5px 5px 0px var(--accent-color));
 } /*ffa6bc*/
 
 .weapIcon[style*="0.7"] {
@@ -825,7 +840,7 @@ input:checked+.sliderSml:before {
 }
 
 #timerVal {
-	color: black;
+	color: var(--accent-color);
     font-size: 50px;
     padding: 0;
     text-align: center;
@@ -841,7 +856,7 @@ input:checked+.sliderSml:before {
     left: 50%;
     transform: translateX(-50%);
     padding: 3px 20px;
-    background: black;
+    background: var(--accent-color);
     border-radius: 99999px;
 }
 
@@ -870,7 +885,7 @@ input:checked+.sliderSml:before {
 
 #pingDisplay, #fpsDisplay {
     padding: 5px 15px;
-    background: black;
+    background: var(--accent-color);
     border-radius: 99999px;
     display: flex;
     align-items: center;
@@ -883,7 +898,7 @@ input:checked+.sliderSml:before {
 }
 
 #pingDisplay, #pingText, #pingIcon {
-    color: black !important;
+    color: var(--accent-color) !important;
 }
 
 #pingDisplay {
@@ -959,6 +974,7 @@ input:checked+.sliderSml:before {
 .endCard * {
     color: black !important;
     background: transparent !important;
+    text-shadow: unset !important;
 }
 
 .matchVote {
@@ -977,7 +993,7 @@ input:checked+.sliderSml:before {
 }
 
 .countIcon span {
-	color: black !important;
+	color: var(--accent-color) !important;
 }
 
 #deathCount, #scoreCount {
@@ -1033,6 +1049,20 @@ input:checked+.sliderSml:before {
 
 #killFeed {
     padding: 10px;
+}
+
+#igXPBar {
+    width: 100% !important;
+    margin-left: unset;
+    left: 0;
+    bottom: 0;
+    border-radius: unset;
+}
+
+#igXPBarProg {
+    background-image: unset !important;
+    background: white;
+    opacity: 1;
 }
 
 .kfItem {
@@ -1105,7 +1135,7 @@ input:checked+.sliderSml:before {
 }
 
 .leaderItem:first-child > * {
-    color: black !important;
+    color: var(--accent-color) !important;
 }
 
 .leaderItem:last-child {
