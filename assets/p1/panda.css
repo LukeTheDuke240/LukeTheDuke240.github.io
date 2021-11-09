@@ -747,6 +747,24 @@ input:checked+.sliderSml:before {
     -webkit-mask: url("data:image/svg+xml,%3Csvg width='350' height='150' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice'%3E%3C!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit--%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Ccircle cx='275' cy='75' fill='%23000000' id='svg_1' r='75' stroke='%23000000' stroke-width='0'/%3E%3Crect fill='%23000000' height='181.000005' id='svg_2' stroke='%23000000' stroke-width='0' width='289.000008' x='-12.03125' y='-14.666665'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+#killStreakHolder {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    z-index: 99;
+    transform: translateY(-50%);
+}
+
+.killStreakItem {
+    background-color: transparent;
+    transform: scale(1.5);
+    filter: invert(1) grayscale(1) contrast(99999);
+}
+
+.killStreakItem > * {
+    display: none;
+}
+
 #ammoDisplay {
 	background-size: 0%;
     display: inline-block;
