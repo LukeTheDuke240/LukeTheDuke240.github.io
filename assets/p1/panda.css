@@ -689,7 +689,7 @@ input:checked+.sliderSml:before {
 
 #bottomLeftHolder {
 	left: unset;
-	right: 50%;
+	right: calc(50% + 2px);
     transform: scale(0.5) translateX(50%) translateY(50%);
     bottom: 20px;
 }
@@ -742,7 +742,7 @@ input:checked+.sliderSml:before {
     height: 150px;
     bottom: 20px;
     right: unset;
-    left: 50%;
+    left: calc(50% - 2px);
     transform: scale(0.5) translateX(-50%) translateY(50%);
     -webkit-mask: url("data:image/svg+xml,%3Csvg width='350' height='150' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice'%3E%3C!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit--%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Ccircle cx='275' cy='75' fill='%23000000' id='svg_1' r='75' stroke='%23000000' stroke-width='0'/%3E%3Crect fill='%23000000' height='181.000005' id='svg_2' stroke='%23000000' stroke-width='0' width='289.000008' x='-12.03125' y='-14.666665'/%3E%3C/g%3E%3C/svg%3E");
 }
